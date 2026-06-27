@@ -77,6 +77,11 @@ export default function PostCard({
         {post.body}
       </p>
 
+      <div style={{ display: "flex", gap: "1rem", opacity: 0.85 }}>
+        <span aria-label="curtidas">👍 {post.reactions?.likes ?? 0}</span>
+        <span aria-label="descurtidas">👎 {post.reactions?.dislikes ?? 0}</span>
+      </div>
+
       <div
         style={{
           display: "flex",
